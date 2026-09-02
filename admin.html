@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลผู้บริหาร | วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Sarabun', 'Segoe UI', sans-serif; line-height: 1.7; background: #f0f4f8; color: #333; }
+        
+        header { background: #1a5276; color: white; padding: 25px 20px; text-align: center; }
+        header h1 { font-size: 1.8rem; margin-bottom: 5px; }
+        header p { font-size: 1rem; opacity: 0.9; }
+        
+        nav { background: #2874a6; padding: 13px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+        
+        main { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        
+        h2.page-title {
+            text-align: center;
+            color: #1a5276;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .admin-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .admin-card:hover { transform: translateY(-5px); }
+        
+        .admin-card .photo {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background: #d6eaf8;
+        }
+        
+        .admin-card .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        
+        .admin-card .info {
+            padding: 20px 15px;
+        }
+        
+        .admin-card h3 {
+            color: #1a5276;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+        
+        .admin-card .position {
+            color: #2874a6;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        footer {
+            background: #1a5276;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 50px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</h1>
+        <p>Lanna Polytechnic Technology College Chiang Mai</p>
+    </header>
+
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="admin.html">ข้อมูลผู้บริหาร</a>
+        <a href="staff.html">ข้อมูลบุคลากร</a>
+        <a href="student.html">ข้อมูลนักเรียน นักศึกษา</a>
+        <a href="department.html">สาขาวิชาที่เปิดสอน</a>
+    </nav>
+
+    <main>
+        <h2 class="page-title">ผู้อำนวยการ / ผู้แทนครู</h2>
+
+        <div class="admin-grid">
+            <!-- ผู้อำนวยการ -->
+            <div class="admin-card">
+                <div class="photo">
+                    <img src="images/director.jpg" alt="นายฉลวย พันธ์ทอง">
+                </div>
+                <div class="info">
+                    <h3>นายฉลวย พันธ์ทอง</h3>
+                    <p class="position">ผู้อำนวยการ</p>
+                </div>
+            </div>
+
+            <!-- ผู้แทนครู 1 -->
+            <div class="admin-card">
+                <div class="photo">
+                    <img src="images/rep1.jpg" alt="นายศิริภพ เจริญกุล">
+                </div>
+                <div class="info">
+                    <h3>นายศิริภพ เจริญกุล</h3>
+                    <p class="position">ผู้แทนครู</p>
+                </div>
+            </div>
+
+            <!-- ผู้แทนครู 2 -->
+            <div class="admin-card">
+                <div class="photo">
+                    <img src="images/rep2.jpg" alt="นางวิมลพักตร์ เตรียมสันติภาพ">
+                </div>
+                <div class="info">
+                    <h3>นางวิมลพักตร์ เตรียมสันติภาพ</h3>
+                    <p class="position">ผู้แทนครู</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่ | สงวนลิขสิทธิ์</p>
+    </footer>
+</body>
+</html>
