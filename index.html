@@ -8,53 +8,25 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Sarabun', 'Segoe UI', sans-serif;
-            line-height: 1.7;
             background: #f0f4f8;
             color: #333;
+            line-height: 1.6;
         }
 
-        /* ===== Header ===== */
-        header {
-            background: linear-gradient(135deg, #1a5276, #2874a6);
+        /* ===== Header เล็ก ===== */
+        .top-bar {
+            background: #1a5276;
             color: white;
-            padding: 35px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        header::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
-            animation: pulse 8s infinite linear;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 8px;
-            position: relative;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            position: relative;
+            padding: 12px 15px;
+            font-size: 0.95rem;
         }
 
         /* ===== Navigation ===== */
         nav {
-            background: #1a5276;
-            padding: 0;
+            background: #154360;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -63,100 +35,106 @@
             color: white;
             text-decoration: none;
             display: inline-block;
-            padding: 16px 22px;
+            padding: 15px 22px;
             font-weight: 600;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
-            position: relative;
+            transition: 0.3s;
         }
         nav a:hover {
             background: #2874a6;
         }
-        nav a::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background: #85c1e9;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
+
+        /* ===== Hero Section (รูปกลุ่มใหญ่) ===== */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 520px;
+            overflow: hidden;
         }
-        nav a:hover::after {
-            width: 70%;
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero-overlay h1 {
+            font-size: 2.4rem;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+        .hero-overlay p {
+            font-size: 1.25rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+            max-width: 800px;
         }
 
-        /* ===== Main Content ===== */
+        /* ===== Content Section ===== */
         main {
-            max-width: 1050px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
-        .hero {
+        .welcome-box {
             background: white;
             border-radius: 16px;
             padding: 40px 35px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 100%;
-            background: linear-gradient(to bottom, #1a5276, #2874a6);
-        }
-
-        .hero h2 {
+        .welcome-box h2 {
             color: #1a5276;
             font-size: 1.8rem;
             margin-bottom: 18px;
         }
-        .hero p {
+        .welcome-box p {
             font-size: 1.1rem;
             color: #444;
-            max-width: 800px;
-            margin: 0 auto 15px;
+            max-width: 850px;
+            margin: 0 auto 12px;
         }
 
         /* ===== Feature Cards ===== */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 25px;
-            margin-top: 40px;
+            margin-top: 45px;
         }
         .feature-card {
             background: white;
             border-radius: 14px;
-            padding: 28px 22px;
+            padding: 28px 20px;
             text-align: center;
             box-shadow: 0 6px 20px rgba(0,0,0,0.07);
             transition: all 0.3s ease;
-            border-top: 4px solid #2874a6;
+            border-top: 5px solid #2874a6;
         }
         .feature-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.12);
         }
         .feature-card .icon {
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             margin-bottom: 12px;
         }
         .feature-card h3 {
             color: #1a5276;
             margin-bottom: 8px;
-            font-size: 1.2rem;
-        }
-        .feature-card p {
-            font-size: 0.98rem;
-            color: #555;
         }
 
         /* ===== Footer ===== */
@@ -168,17 +146,13 @@
             margin-top: 60px;
             font-size: 0.95rem;
         }
-        footer p {
-            opacity: 0.9;
-        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</h1>
-        <p>Lanna Polytechnic Technology College Chiang Mai</p>
-    </header>
+    <div class="top-bar">
+        วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่ | Lanna Polytechnic Technology College Chiang Mai
+    </div>
 
     <nav>
         <a href="index.html">หน้าหลัก</a>
@@ -188,9 +162,17 @@
         <a href="department.html">สาขาวิชาที่เปิดสอน</a>
     </nav>
 
+    <!-- Hero รูปกลุ่มใหญ่ -->
+    <section class="hero">
+        <img src="images/hero.jpg" alt="กิจกรรมนักศึกษาวิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่">
+        <div class="hero-overlay">
+            <h1>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</h1>
+            <p>มุ่งเน้นผลิตและพัฒนากำลังคนด้านอาชีวศึกษาและเทคโนโลยี</p>
+        </div>
+    </section>
+
     <main>
-        <!-- Hero Section -->
-        <div class="hero">
+        <div class="welcome-box">
             <h2>ยินดีต้อนรับสู่เว็บไซต์วิทยาลัย</h2>
             <p>
                 วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่ เป็นสถานศึกษาที่มุ่งเน้นการผลิตและพัฒนากำลังคนด้านอาชีวศึกษาและเทคโนโลยี 
@@ -201,27 +183,26 @@
             </p>
         </div>
 
-        <!-- Feature Cards -->
         <div class="features">
             <div class="feature-card">
                 <div class="icon">👨‍💼</div>
                 <h3>ผู้บริหาร</h3>
-                <p>ข้อมูลผู้อำนวยการและผู้แทนครูของวิทยาลัย</p>
+                <p>ข้อมูลผู้อำนวยการและผู้แทนครู</p>
             </div>
             <div class="feature-card">
                 <div class="icon">👥</div>
                 <h3>บุคลากร</h3>
-                <p>รายชื่อครูและเจ้าหน้าที่ผู้ปฏิบัติงาน</p>
+                <p>รายชื่อครูและเจ้าหน้าที่</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🎓</div>
                 <h3>นักเรียน นักศึกษา</h3>
-                <p>ข้อมูลจำนวนและสถิติผู้เรียน</p>
+                <p>ข้อมูลและสถิติผู้เรียน</p>
             </div>
             <div class="feature-card">
                 <div class="icon">📚</div>
                 <h3>สาขาวิชา</h3>
-                <p>หลักสูตรและสาขาวิชาที่เปิดสอน</p>
+                <p>หลักสูตรที่เปิดสอน</p>
             </div>
         </div>
     </main>
