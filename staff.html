@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลบุคลากร | วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Sarabun', 'Segoe UI', sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a5276, #2874a6);
+            color: white;
+            padding: 28px 20px;
+            text-align: center;
+        }
+        header h1 { font-size: 1.8rem; margin-bottom: 4px; }
+        header p { opacity: 0.9; }
+
+        nav {
+            background: #1a5276;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav a:hover { background: #2874a6; }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #1a5276;
+            font-size: 1.9rem;
+            margin-bottom: 10px;
+        }
+        .page-subtitle {
+            text-align: center;
+            color: #2874a6;
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            font-weight: 500;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 28px;
+        }
+
+        .staff-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.35s ease;
+            text-align: center;
+        }
+        .staff-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(26, 82, 118, 0.18);
+        }
+
+        .staff-card .photo {
+            width: 100%;
+            height: 260px;
+            background: linear-gradient(135deg, #d6eaf8, #aed6f1);
+            overflow: hidden;
+        }
+        .staff-card .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.4s ease;
+        }
+        .staff-card:hover .photo img {
+            transform: scale(1.07);
+        }
+
+        .staff-card .info {
+            padding: 18px 14px 22px;
+        }
+        .staff-card h3 {
+            color: #1a5276;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        .staff-card .eng-name {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .staff-card .position {
+            color: #2874a6;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: #eaf2f8;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1a5276, #154360);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</h1>
+        <p>Lanna Polytechnic Technology College Chiang Mai</p>
+    </header>
+
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="admin.html">ข้อมูลผู้บริหาร</a>
+        <a href="staff.html">ข้อมูลบุคลากร</a>
+        <a href="student.html">ข้อมูลนักเรียน นักศึกษา</a>
+        <a href="department.html">สาขาวิชาที่เปิดสอน</a>
+    </nav>
+
+    <main>
+        <h2 class="page-title">ข้อมูลบุคลากร</h2>
+        <p class="page-subtitle">แผนกเทคโนโลยีสารสนเทศ</p>
+
+        <div class="staff-grid">
+
+            <!-- 1 -->
+            <div class="staff-card">
+                <div class="photo">
+                    <img src="po/staff1.jpg" alt="นางสาวมยุลีย์ พงษ์นุพัศกุล">
+                </div>
+                <div class="info">
+                    <h3>นางสาวมยุลีย์ พงษ์นุพัศกุล</h3>
+                    <div class="eng-name">Miss Mayulee Chailangka</div>
+                    <div class="position">หัวหน้าสาขาวิชาเทคโนโลยีสารสนเทศ</div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="staff-card">
+                <div class="photo">
+                    <img src="po/staff2.jpg" alt="นางสาวณัฐกานต์ ภิรมย์">
+                </div>
+                <div class="info">
+                    <h3>นางสาวณัฐกานต์ ภิรมย์</h3>
+                    <div class="eng-name">Miss Nutthakan Pirom</div>
+                    <div class="position">รองหัวหน้าสาขาวิชาเทคโนโลยีสารสนเทศ</div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="staff-card">
+                <div class="photo">
+                    <img src="po/staff3.jpg" alt="นางสาวสวัตตา ประทุม">
+                </div>
+                <div class="info">
+                    <h3>นางสาวสวัตตา ประทุม</h3>
+                    <div class="eng-name">Miss Sawitta Pratoom</div>
+                    <div class="position">ครูเทคโนโลยีสารสนเทศ</div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="staff-card">
+                <div class="photo">
+                    <img src="po/staff4.jpg" alt="นางสาวธันย์ลักษณ์ กันทะ">
+                </div>
+                <div class="info">
+                    <h3>นางสาวธันย์ลักษณ์ กันทะ</h3>
+                    <div class="eng-name">Miss Thunyalak Kuntha</div>
+                    <div class="position">ครูเทคโนโลยีสารสนเทศ</div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="staff-card">
+                <div class="photo">
+                    <img src="po/staff5.jpg" alt="นายไพศาล ณ ลำปาง">
+                </div>
+                <div class="info">
+                    <h3>นายไพศาล ณ ลำปาง</h3>
+                    <div class="eng-name">Mr. Paisan N.Lampang</div>
+                    <div class="position">ครูเทคโนโลยีสารสนเทศ</div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="staff-card">
+                <div class="photo">
+                    <img src="po/staff6.jpg" alt="นางสาวนาริน พรมมี">
+                </div>
+                <div class="info">
+                    <h3>นางสาวนาริน พรมมี</h3>
+                    <div class="eng-name">Miss Narin Phromme</div>
+                    <div class="position">ครูเทคโนโลยีสารสนเทศ</div>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="staff-card">
+                <div class="photo">
+                    <img src="po/staff7.jpg" alt="นายเทวฤทธิ์ วงค์ฉายา">
+                </div>
+                <div class="info">
+                    <h3>นายเทวฤทธิ์ วงค์ฉายา</h3>
+                    <div class="eng-name">Mr. Tewarit Wongchaya</div>
+                    <div class="position">ครูเทคโนโลยีสารสนเทศ</div>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="staff-card">
+                <div class="photo">
+                    <img src="po/staff8.jpg" alt="นางสาววรัญญา อินชัย">
+                </div>
+                <div class="info">
+                    <h3>นางสาววรัญญา อินชัย</h3>
+                    <div class="eng-name">Miss Waranya Inchai</div>
+                    <div class="position">ครูเทคโนโลยีสารสนเทศ</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่ | สงวนลิขสิทธิ์</p>
+    </footer>
+
+</body>
+</html>
